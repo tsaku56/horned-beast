@@ -1,13 +1,10 @@
 import React from "react";
-import { data } from "../../data";
+import data from "../../data.json";
 import HornedBeast from "../HornedBeast/HornedBeast";
 
 export default function Main() {
-  return (
-    <main>
-      <HornedBeast title={data[0].title} imageURL={data[0].image_url} description={data[0].description} />
-      <HornedBeast title={data[1].title} imageURL={data[1].image_url} description={data[1].description} />
-      <HornedBeast title={data[2].title} imageURL={data[2].image_url} description={data[2].description} />
-    </main>
-  );
+  const beasts = data.map((item) => {
+    return <HornedBeast id={item._id} title={item.title} imageURL={item.image_url} description={item.description} />;
+  });
+  return <main>{beasts}</main>;
 }

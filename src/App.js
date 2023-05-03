@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer";
 // rfc + enter to use this starter code.
 // can use <> to make a fragment instead of doing a div
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Header />
@@ -16,5 +16,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
