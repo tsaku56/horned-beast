@@ -76,3 +76,15 @@ Delete index.css
 logo.svg
 reportWebVital..js
 setupTests.Js
+
+#### class 02
+
+// // arrow function - declare underneath
+
+// const myRunning = () => {
+// console.log("Running")
+// }
+// myRunning();
+
+// // main advantage, its shorter
+// // contextual this
