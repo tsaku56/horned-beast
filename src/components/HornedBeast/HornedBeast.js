@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../HornedBeast/HornedBeast.css";
 
-export default function HornedBeast({ title, imageURL, description, imageClick }) {
+export default function HornedBeast({ beast, handleModal }) {
   const [votes, setVotes] = useState(0);
 
   function handleClick() {
@@ -18,10 +18,10 @@ export default function HornedBeast({ title, imageURL, description, imageClick }
   }
 
   return (
-    <div>
-      <h2>{title}</h2>
-      <img className="beastImage" src={imageURL} alt={description} title={title} onClick={() => imageClick(imageURL)} />
-      <p>{description}</p>
+    <div className="beastCard">
+      <h2>{beast.title}</h2>
+      <img className="beastImage" src={beast.image_url} alt={beast.title} onClick={() => handleModal(beast)} />
+      <p>{beast.description}</p>
       <div className="beastButton">
         <p onClick={handleClick}>💚</p>
         <p onClick={handleDeClick}>🖤{votes} </p>
